@@ -11,14 +11,6 @@ const slides = [
 ]
 // function that load the carrousel
 document.body.onload = function () {
-  //variable that pass to the previous image and call function
-  let prevImages = document
-    .querySelector('.arrow_left')
-    .addEventListener('click', leftArrowClick)
-  //variable that pass to the next image and call function
-  let nextImage = document
-    .querySelector('.arrow_right')
-    .addEventListener('click', rightArrowClick)
   let current = 0
   let totalSlides = slides.length
   let dotDiv = document.querySelector('.dots')
@@ -40,7 +32,6 @@ document.body.onload = function () {
       'src',
       './assets/images/carrousel/' + slides[current].image
     )
-    text.innerHTML = slides[current].tagLine
 
     let dotSelected = document.querySelector('.dot_selected')
     dotSelected.classList.remove('dot_selected')
@@ -60,12 +51,5 @@ document.body.onload = function () {
     changeImage()
   }
 
-  //function that change current image to the right  when she's call
-  function rightArrowClick() {
-    current += 1
-    if (current >= totalSlides) {
-      current = 0
-    }
-    changeImage()
-  }
+  setInterval(leftArrowClick, 3000)
 }
