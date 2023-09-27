@@ -1,0 +1,205 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-block-start: 0em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 470px;
+  position: relative;
+  height: 100px;
+}
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion des fleches du carrousel */
+#banner .arrow {
+  position: absolute;
+}
+
+#banner .arrow_left {
+  left: 10px;
+}
+
+#banner .arrow_right {
+  right: 10px;
+}
+
+/* Gestion des points du carrousel */
+.dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+
+.dot {
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dot_selected {
+  background-color: #fff;
+}
+
+/* Fin du code CSS pour le carousel */
+#banner p {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 66px;
+  color: white;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+#banner span {
+  display: block;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* Activites*/
+.activites {
+  margin-top: 20px;
+  width: auto;
+  padding-left: 30px;
+  padding-bottom: 65px;
+  padding-right: 30px;
+}
+
+.activites-cards .card-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  height: 439px;
+}
+
+.activites-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.activites-cards .card-title {
+  margin-top: 20px;
+  margin-left: 19px;
+}
+
+.activites-cards .card-activites {
+  display: flex;
+  flex-direction: column;
+  width: 297px;
+}
+
+.activites-title {
+  margin-right: 19px;
+  margin-left: 19px;
+}
+
+.activites-cards img {
+  height: 380px;
+  border-radius: 20px 20px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*****Footer*****/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: var(--grey, #f2f2f2);
+  height: auto;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .activites-cards .card-activites {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  }
+  .populaires-cards img {
+    height: 146px;
+    width: 111px;
+  }
+  .activites-row {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .activites-cards img {
+    height: 141px;
+    align-self: stretch;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    align-self: stretch;
+    height: auto;
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=index.css.map */
